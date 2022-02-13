@@ -16,3 +16,8 @@ console.log(b.colors); // red
 // can delete items 
 delete b.colors;
 console.log(b)
+
+// ************  Tuple = > array with fixed length and fixed type
+
+let c: [ string, number, boolean]
+c = ["plane", 1, true]

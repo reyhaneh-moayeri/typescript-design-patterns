@@ -13,3 +13,6 @@ console.log(b.colors); // red
 // can delete items 
 delete b.colors;
 console.log(b);
+// ************  Tuple = > array with fixed length and fixed type
+var c;
+c = ["plane", 1, true];
