@@ -21,3 +21,17 @@ console.log(b)
 
 let c: [ string, number, boolean]
 c = ["plane", 1, true]
+
+//******* using sets
+let d: Set<number>
+d = new Set([2,5,8,7,2])
+
+let f: Set<unknown>
+f= new Set([1,2,3,4,true, false, "hello"])
+
+f.add("dog")
+f.delete(4)
+console.log(f)
+console.log(f.size)  // 7
+console.log(f.has("hello"))  // true
+console.log(Array.from(f)[2])  // 3
