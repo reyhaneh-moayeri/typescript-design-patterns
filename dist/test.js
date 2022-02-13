@@ -27,3 +27,23 @@ console.log(f);
 console.log(f.size); // 7
 console.log(f.has("hello")); // true
 console.log(Array.from(f)[2]); // 3
+// ************  Classes
+var Cat = /** @class */ (function () {
+    function Cat(name) {
+        this.stepWalked = 0;
+        this.name = name;
+    }
+    Cat.prototype.walk = function (steps) {
+        console.log("".concat(this.name, " walked ").concat(steps, " steps"));
+        this.stepWalked += steps;
+    };
+    Cat.prototype.totalStepsWalked = function () {
+        console.log("".concat(this.name, " has walked ").concat(this.stepWalked, " steps totally"));
+    };
+    return Cat;
+}());
+var CAT = new Cat("Cosmo");
+CAT.walk(10);
+CAT.walk(10);
+CAT.walk(15);
+CAT.totalStepsWalked();

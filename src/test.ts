@@ -35,3 +35,31 @@ console.log(f)
 console.log(f.size)  // 7
 console.log(f.has("hello"))  // true
 console.log(Array.from(f)[2])  // 3
+
+
+// ************  Classes
+
+class Cat {
+    name: string;
+    stepWalked: number = 0
+
+    constructor(name: string) {
+        this.name = name
+    }
+
+    walk(steps: number) : void{
+        console.log(`${this.name} walked ${steps} steps`)
+
+        this.stepWalked += steps
+    }
+
+    totalStepsWalked() : void{
+      console.log(`${this.name} has walked ${this.stepWalked} steps totally`)
+    }
+}
+
+const CAT = new Cat("Cosmo")
+CAT.walk(10)
+CAT.walk(10)
+CAT.walk(15)
+CAT.totalStepsWalked()
