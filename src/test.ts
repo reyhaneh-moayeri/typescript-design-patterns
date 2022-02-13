@@ -36,10 +36,18 @@ console.log(f.size)  // 7
 console.log(f.has("hello"))  // true
 console.log(Array.from(f)[2])  // 3
 
+// Interfaces *********** a tool in typescript to define the structure of an object and classes to ensure that they 
+// conform to any specific rule that you want to them
+
+
+interface Animal {
+    name: string;
+    stepWalked: number;
+}
 
 // ************  Classes
 
-class Cat {
+class Cat implements Animal {
     name: string;
     stepWalked: number = 0
 
