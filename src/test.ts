@@ -71,3 +71,35 @@ CAT.walk(10)
 CAT.walk(10)
 CAT.walk(15)
 CAT.totalStepsWalked()
+
+// Abstract classes => are base class that have methods and properties that are common to all the derived classes
+
+class Workout {
+    time: number;
+
+    constructor(time: number){
+        this.time = time
+    }
+}
+
+class Running extends Workout {
+    steps: number
+    constructor(time: number, steps: number){
+        super(time)
+        this.steps = steps
+    }
+}
+class Bycling extends Workout {
+    distance: number
+    constructor(time: number, distance: number){
+        super(time)
+        this.distance = distance
+    }
+
+}
+// use Access modifiers to restrict the access to the properties and methods
+
+// public => can be accessed from anywhere => default
+// private => can be accessed only from the class that it is defined in
+// protected => can be accessed only from the class that it is defined in and the derived classes
+// static => 
