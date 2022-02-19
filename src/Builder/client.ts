@@ -6,3 +6,5 @@ const frenchFries = FrenchFriesDirector.construct();
 
 pizza.construction();
 frenchFries.construction();
+
+// builder pattern is a creational pattern that lets you construct complex objects step by step.
