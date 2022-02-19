@@ -1,1 +1,22 @@
-// TODO: IMPLEMENT SUB
+import { IValue } from "./value";
+
+class _Sub implements IValue {
+  value: number;
+
+  constructor(val1: number | IValue, val2: number | IValue) {
+    const left = Object.prototype.hasOwnProperty.call(val1, "value")
+      ? (val1 as IValue).value
+      : (val1 as number);
+    const right = Object.prototype.hasOwnProperty.call(val2, "value")
+      ? (val2 as IValue).value
+      : (val2 as number);
+    this.value = left - right;
+  }
+}
+
+export default function Sub(
+  val1: number | IValue,
+  val2: number | IValue
+): IValue {
+  return new _Sub(val1, val2);
+}
