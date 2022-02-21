@@ -1,5 +1,17 @@
 // Bridge Pattern Concept Sample Code
 
+/*
+1- we use bridge when we want to seperate a solution where the abstraction and implementation 
+may be tightly coupled and you want to break it up into smaller conseptual parts.
+
+2- once we have added the bridge abstraction, we can extend each side of it seperately without
+braking the other 
+
+3- the bridge pattern is similar to adapter pattern except in the intent that you developed it.
+the bridge is an approach to refactor existing code whereas the adapter adapt to the existing code through 
+it's existing interfaces and methods without changing the internals.
+*/
+
 interface IAbstraction {
   method(value: string[]): void;
 }
